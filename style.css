@@ -1,0 +1,661 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    place-items: center;
+    overflow: hidden;
+
+}
+
+/* Container */
+
+.container{
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing:border-box;
+}
+
+/*Containers + bckg imgs*/
+
+.c1{
+    background-image: url(assets/1889167.jpg);
+}
+.c2{
+    background-image: url(assets/wall2.jpg);
+}
+.c3{
+    background-image: url(assets/wall3.jpg);
+}
+.c4{
+    background-image: url(assets/wall1.jpg);
+}
+.c5{
+    background-image: url(assets/wall5.jpg);
+}
+
+/* Logo*/
+
+.logo{
+    width:50px;
+    cursor:pointer;
+}
+
+/* NavBar */
+
+.navbar{
+    height:12%;
+    background: none;
+    width: 100%;
+    margin:auto;
+    padding:0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* NavBar */
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+    position: relative;
+}
+
+/* NavBar Body */
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: monospace;
+    text-transform:uppercase; 
+}
+
+/* NavBar hover  detials */
+
+nav ul li::after{
+    content:'';
+    height:3px;
+    width:0;
+    background : #fff;
+    position:absolute;
+    left: 0;
+    bottom: -7px;
+    transition: 0.5s; 
+}
+
+/* NavBar action */
+
+nav ul li:hover::after{
+    width:100%; 
+}
+
+/* layer */
+
+.layer{
+    display: flex;
+    justify-content: center;
+}
+
+/* img */
+
+.layer img{
+    position: absolute;
+    top:21%;
+    left:25%;
+    display: block;
+    margin: auto;
+}
+
+/* animation */
+
+.layer img{
+        animation :  mvt1 2s 1 ease alternate ;
+}
+@keyframes mvt1 {
+   0% {transform: translate(-50rem,0)} 
+}
+
+/* Vertical line */
+
+.vl {
+  border-left: 2px solid white;
+  height:270px;
+  position: absolute;
+  top:25%;
+  left:50%;  
+}
+
+/* <AI> header */
+
+h1{
+    color:#fff;
+    font-size: 100px;
+    margin:0;
+    padding:0; 
+    font-weight: 50px;
+    font-family: monospace;
+    position :absolute;
+    top:40%;
+    left:63%;
+    padding: 2px 0 2px 1;
+    transform: translateX(-50%) translateY(-80%);
+}
+
+/* <skin in the game> sentence   */
+
+p{
+   color:#fff; 
+   text-align: center;
+   position: fixed;
+   font-size: 30px;
+   font-family:  monospace;
+   top:45%;
+   left:63%;
+   padding: 2px 0 2px 1;
+   text-transform: uppercase;
+   transform: translateX(-50%) translateY(-80%);
+}
+
+/* Neon */
+
+/* <a> renderd as button as it index another html page  */
+
+ .layer a{
+    position: absolute;
+    top:50%;
+    left:63%;
+    transform: translate(-50%,-50%);
+    height:60px;
+    width:200px;
+    margin:0 35 px;
+    border-radius: 50px;
+    border:none;
+    outline: none;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    color:#fff;
+    font-size: 20px;
+    font-weight: 2px;
+    text-transform: uppercase;
+    text-align: center ;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: bg 0.5s;
+    background-size: 400%;
+    border-radius: 30px;
+}
+
+/* hover */
+.layer a :hover{
+    animation: glow 8s linear infinite;
+}
+
+/* btn glowing */
+
+@keyframes glow {
+    0%
+    {
+        background-position: 0%;
+    }
+    100%
+    {
+        background-position: 400%;
+    }
+}
+
+/* animation of the second part of the layer from the right direction
+    for <AI> , <Skin in the game> , <a>*/
+
+.layer h1,p,a{
+    animation: mvt2 2s 1 ease alternate ;
+}
+@keyframes mvt2{
+    0% {transform:translate(50rem,0)}
+}
+
+/* footer */
+
+footer{
+    height: auto;
+    width:100vw;
+    font-family: verdana;
+    color:#fff;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top:1;
+}
+
+ /* footer content ->>> contacts icons */
+
+.footer-content{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: -10px;
+}
+
+/*Joystick*/
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 23px;
+}
+
+/* Contact us */
+
+.footer-content p2{
+    max-width: 150px;
+    margin:5px;
+    line-height: 12px;
+    font-size: 18px;
+}
+
+/* social media icons */
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px 0 2px 0;
+}
+.socials li{
+    margin: 0 5px;
+}
+.socials b{
+    text-decoration: none;
+    color:#fff;
+}
+.socials b i{
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color .4s ease;
+}
+
+/* social media icons hovering >>.. cursor */
+
+.socials b:hover i{
+    color:aqua;
+    cursor: pointer;
+
+}
+
+/* fooeter bootom */
+
+.footer-bottom{
+    width: 100vw;
+    padding:5px 0;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+}
+
+/* coyright .......*/
+
+.footer-bottom p1{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform:capitalize;
+    color: #fff;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    color: blue;
+    font-weight: 200;
+}
+
+/* box */
+
+.box{
+    position: absolute;
+    top:12%;
+    left:18%;
+    width:900px;
+    height:400px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    --border-width:15px;
+    border-radius: var(--border-width);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    transform-style: preserve-3d;
+     box-shadow: 2px 2px 10px #2a3cad,
+    2px 2px 10px #2a3cad,
+    0 0 20px #2a3cad,
+    0 0 50px#2a3cad; 
+}
+
+/* logo */
+
+.box img{
+        height:80px;
+        width:80px;
+        position: absolute;
+        top:5%;
+        left:30%;
+        border-radius: 50%;
+}
+
+/* vertical linne */
+
+.vl2{
+  border-left: 2px solid white;
+  height:100px;
+  position: absolute;
+  top:5%;
+  left:50%; 
+}
+
+/* <Ai> header */
+
+.box h4{
+    position: absolute;
+    top:10%;
+    left:55%;
+    color:white;
+    font-size: 35px;
+    word-spacing: 2px;
+    text-transform:capitalize;
+}
+
+.box p1{
+    position: absolute;
+    top:35%;
+    left:25%;
+    color:white;
+    font-size: 30px;
+    font-family: monospace;
+    text-transform:capitalize;
+}
+
+.box p2{
+    position: absolute;
+    top:75%;
+    left:46%;
+    color:white;
+    font-size: 35px;
+    font-family: monospace;
+    word-spacing: 2px;
+    text-transform:capitalize;
+}
+
+/* games pages boxes */
+/* note : as there are different boxes with differnet dimensions 
+  and differrent lighting specs*/
+  
+.box1{
+    position: absolute;
+    top:12%;
+    left:31%;
+    width:550px;
+    height:450px;
+    box-shadow: 0 15px 35px #2a3cad;
+    --border-width:15px;
+    border-radius: var(--border-width);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    transform-style: preserve-3d;
+    border-color: #2a3cad;
+}
+
+/* Contactus */
+
+p4{
+    font-size: 50px;
+    font-family: verdana;
+    color:#fff;
+    position: absolute;
+    text-transform: uppercase;
+    top:10%;
+    left:33%;
+}
+
+/* contacts */
+
+.contacts{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px 0 10rem 0;
+    position: absolute;
+    top:40%;
+    left:33%;
+}
+.contacts li{
+    margin: 0 5px;
+}
+.contacts b{
+    text-decoration: none;
+    color:#fff;
+    margin: 10px;
+}
+.contacts b i{
+    font-size: 5rem;
+    cursor: pointer;
+    transition: color .4s ease;
+}
+
+/* contactas hover */
+
+.contacts b:hover i{
+    color:black;
+    cursor: pointer;
+}
+
+/* layer 2 */
+.layer2{
+    display: flex;
+    justify-content: center;
+}
+
+.layer2 a{
+    animation :  mvt3 2s 1 ease alternate ;
+}
+
+.layer2 crd1,crd2{
+    position: absolute;
+    top:21%;
+    left:25%;
+    display: block;
+    margin: auto;
+    animation :  mvt3 2s 1 ease alternate ;
+}
+
+/* animation */
+
+@keyframes mvt3 {
+   0% {transform: translate(-50rem,0)} 
+}
+
+/*card*/
+
+.card{
+    width:300px;
+    height:420px;
+    background : #fff;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 15px 25px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform  0.5s;
+    display: grid;grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    background-position: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    
+}
+/* cards */
+
+.crd1{
+    background-image: url(assets/wall3.jpg);
+    background-size: cover;
+}
+.crd2{
+    background-image: url(assets/pong.png);
+    object-fit: cover;
+}
+
+.crd3{
+    background-image: url(assets/tictactoe.jpg);
+    object-fit:scale-down;
+}
+.crd4{
+    background-image: url(assets/18940.jpg);
+}
+
+/* card hover */
+
+.card:hover{
+    transform: translateY(-25px);
+    box-shadow: -2px -2px 10px #fff,
+    2px 2px 10px #fff,
+    0 0 20px #111845a6,
+    0 0 40px #111845a6;
+ }
+
+.c1 h5{
+    color:#fff; 
+    font-size: 20px;
+    position: absolute;
+    top:65%;
+    text-align: center;
+    margin-right: -1rem;
+}
+   
+
+.c2 h5{
+    color:#fff;
+    font-size: 20px;
+    position: absolute;
+    top:65%;
+    left:29%;
+    text-align: center;
+    margin-right: -1rem;
+
+}    
+.c3 h5{
+    color:#fff;
+    font-size: 20px;
+    position: absolute;
+    top:65%;
+    left:26%;
+    text-align: center;
+    margin-right: -1rem;
+ 
+}    
+.c4 h5{
+    color:#fff;
+    font-size: 20px;
+    position: absolute;
+    top:65%;
+    left:26%;
+    text-align: center;
+    margin-right: -1rem;
+    
+}    
+
+
+
+/* canvas pingpong page*/
+
+#pong {
+            border: 2px solid #FFF;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+        
+        td {
+  border:  2px solid #333;
+  height:  100px;
+  width:  100px;
+  text-align:  center;
+  vertical-align:  middle;
+  font-family:  "Comic Sans MS", cursive, sans-serif;
+  font-size:  70px;
+  cursor: pointer;
+}
+
+   #canvas {
+            border: 2px solid gold;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+
+
+
+/* logo2 */
+.logoY {
+    position: absolute;
+    width: 5%;
+    top:85%;
+	-webkit-animation: logoY 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: logoY 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+  
+@-webkit-keyframes logoY {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes logoY {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+
+
+
