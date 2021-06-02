@@ -13,7 +13,7 @@ body{
     flex-direction: column;
     place-items: center;
     overflow: hidden;
-
+    
 }
 
 /* Container */
@@ -24,8 +24,8 @@ body{
     overflow: hidden;
     background-position: center;
     background-size: cover;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 4%;
+    padding-right: 4%;
     box-sizing:border-box;
 }
 
@@ -44,7 +44,7 @@ body{
     background-image: url(assets/wall1.jpg);
 }
 .c5{
-    background-image: url(assets/wall5.jpg);
+    background-image: url(assets/wall4.jpg);
 }
 
 /* Logo*/
@@ -97,6 +97,15 @@ nav ul li::after{
     left: 0;
     bottom: -7px;
     transition: 0.5s; 
+}
+
+nav ul button {
+    margin-left: 20px;
+	cursor:pointer;
+    border-radius: 50px;
+	background: white;
+	outline: none;
+	position: relative
 }
 
 /* NavBar action */
@@ -587,6 +596,90 @@ p4{
     margin-right: -1rem;
     
 }    
+
+
+.box3{
+    position: absolute;
+    top:10%;
+    left:40%;
+    width:300px;
+    height:500px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    --border-width:15px;
+    border-radius: var(--border-width);
+    background:transparent;
+    backdrop-filter:blur(100px);
+    transform-style: preserve-3d;
+     box-shadow: 2px 2px 10px #2a3cad,
+    2px 2px 10px #2a3cad,
+    0 0 20px #2a3cad,
+    0 0 50px#2a3cad; 
+    overflow: hidden;
+}
+
+
+.button-box{
+	position:relative;
+    top:6%;
+    left:35%;
+}
+
+.button{
+	padding:100px 30px;
+	cursor:pointer;
+	background: transparent;
+	outline: none;
+	position: relative;
+}
+
+#signin{
+    top:15%;
+}
+
+#signin button{
+    position: absolute;
+    top:150%;
+    left:7%;
+}
+
+.group1,.group2{
+	top:20%;
+    left:5%;
+	position:relative;
+	width:280px;
+	transition: .6s;
+}
+
+.input-field{
+	width:100%;
+	padding: 12px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-right:0;	border-top:0;
+	border-bottom: 1px solid #999;
+	outline:none;
+	background:transparent;
+}
+
+.submit-btn{
+	width:85%;
+	padding:10px 30px;
+	cursor:pointer;
+	display:block;
+	margin:auto;
+	background: red;
+	border:0;
+	outline: none;
+	border-radius: 30px;
+}
+#signin{
+    left:10px;
+}
+
+#signup{
+    top:-60px;
+	left:350px;
+}	
 
 
 
