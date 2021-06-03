@@ -20,26 +20,28 @@
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="contact.html">CONTACT US</a></li>
                     <li><a href="games.html">GAMES</a></li>
+                    <button onclick="logout()">logout</button>
                 </ul>
             </nav>
         </div>
         <div class="box3">
             <div id="btn" class="button-box">
-                <button onclick="signin()">Sign IN</button>
-                <button onclick="signup()">SIGN UP</button>
+                <button onclick="signinbtn()">Sign IN</button>
+                <button onclick="signupbtn()">SIGN UP</button>
             </div>
             <div id="signin" class="group1">
-                <input id="lemail" class="input-field" placeholder="Email">
-                <input type="password" id="lpass" class="input-field" placeholder="password">
-                <button class="submit-btn" onclick="window.location.href='games.html'">Sign in</button>
+                <input id="in-email" class="input-field" placeholder="Email">
+                <input id="in-password" type="password" class="input-field" placeholder="password">
+                <button class="submit-btn" onclick="signin()">Sign in</button>
+
             </div>
             <div id="signup" class="group2">
                 <input id="name" class="input-field" placeholder="Name">
                 <input id="username" class="input-field" placeholder="Username">
-                <input id="email" class="input-field" placeholder="Email ID">
-                <input type="password" id="pass1" class="input-field" placeholder="Enter password">
+                <input id="up-email" class="input-field" placeholder="Email ID">
+                <input type="password" id="up-password" class="input-field" placeholder="Enter password">
                 <input type="password" id="pass2" class="input-field" placeholder="Set password">
-                <button class="submit-btn">Sign up</button>
+                <button class="submit-btn" onclick="signup()">Sign up</button>
             </div>
         </div>
     </div>
@@ -48,17 +50,22 @@
     <script>
         var x = document.getElementById("signin");
         var y = document.getElementById("signup");
-      
-        function signup() {
+
+        function signupbtn() {
             x.style.left = "-350px";
             y.style.left = "10px";
         }
 
-        function signin() {
+        function signinbtn() {
             x.style.left = "10px";
             y.style.left = "350px";
         }
     </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+
+    <script src="auth.js"></script>
 </body>
 <footer>
     <div class="footer-content">
@@ -78,4 +85,5 @@
         <p1>Copyright &copy; joystick.designed by <span>ahmad alaa</span></p1>
     </div>
 </footer>
+
 </html>
