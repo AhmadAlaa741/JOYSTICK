@@ -23,34 +23,41 @@
                 </ul>
             </nav>
         </div>
+        <img id="head"src="assets/joystick.png" class="header-icon">
         <div class="form">
-                <button class="header-icon"></button>
-                <div id="btn" class="button-box">
+            <div id="btn" class="button-box">
                 <button onclick="signinbtn()">Sign IN</button>
                 <button onclick="signupbtn()">SIGN UP</button>
             </div>
-            <div id="signin" class="group1">
-                <input id="in-email" class="input-field" placeholder="Email">
-                <input id="in-password" type="password" class="input-field" placeholder="password">
-                <button class="submit-btn" onclick="signin()">Sign in</button>
-
+            <div id="sign-in" class="group1">
+                <label >Email</label>
+                <input id="in-email" type="email"class="input-field" >
+                <label >Password</label>
+                <input id="in-password" type="password" class="input-field" >
+                <button class="submit-btn" id="signin">Sign in</button>
             </div>
-            <div id="signup" class="group2">
-                <input id="Name" class="input-field" placeholder="Name">
-                <input id="user@name" class="input-field" placeholder="Username">
-                <input id="Age" class="input-field" placeholder="Age">
-                <input id="up-email" class="input-field" placeholder="Email ID">
-                <input type="password" id="up-password" class="input-field" placeholder="Enter password">
-                <input type="password" id="pass2" class="input-field" placeholder="Set password">
-                <button id="signedup" class="submit-btn" onclick="signup()">Sign up</button>
+            <div id="sign-up" class="group2">
+                <label >Name</label>
+                <input id="Name" type="text" class="input-field">
+                <label >Username</label>
+                <input id="user@name" class="input-field" >
+                <label >Age</label>
+                <input id="Age" type="number"class="input-field" >
+                <label >Email</label>
+                <input id="up-email" type="email"class="input-field" >
+                <label >Password</label>
+                <input type="password" id="up-password" class="input-field" >
+                <label >Set Password</label>
+                <input type="password" id="pass2" class="input-field" >
+                <button id="signup" class="submit-btn" onclick="signup()">Sign up</button>
             </div>
         </div>
     </div>
     <img src="assets/controller.png" class="logoY">
 
     <script>
-        var x = document.getElementById("signin");
-        var y = document.getElementById("signup");
+        var x = document.getElementById("sign-in");
+        var y = document.getElementById("sign-up");
 
         function signupbtn() {
             x.style.left = "-350px";
@@ -87,8 +94,6 @@
     </script>
 
     <script src="auth.js"></script>
-    <script src="database.js"></script>
-
 </body>
 <footer>
     <div class="footer-content">
