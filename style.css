@@ -668,6 +668,8 @@ p4{
     0 0 30px #111845a6;
  }
 
+ /*cards header*/
+
 .c1 h5{
     color:#fff; 
     font-size: 20px;
@@ -729,7 +731,7 @@ p4{
     -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
+/*
 .icon{
     width:100px;
     height:100px;
@@ -800,7 +802,10 @@ p4{
       }
     }
 
+*/
 
+
+/* button box*/
 
 .button-box{
 	position:relative;
