@@ -1,8 +1,10 @@
 var Name = document.getElementById('Name');
 var username = document.getElementById('user@name');
+var age = document.getElementById('Age');
 var email = document.getElementById('up-email');
 var pass = document.getElementById('up-password');
 var signedup = document.getElementById('signedup');
+var logout = document.getElementById('logout');
 
 const rootRef = db.ref('users');
 
@@ -11,15 +13,16 @@ signedup.addEventListener('click',(e)=>{
     rootRef.child(autoId).set({
         Name :Name.value,
         Username : username.value,
+        Age : age.value,
         Email  : email.value,
         Password : pass.value
     });
+
+    
+
 });
 
-var userId = firebase.auth().currentUser.uid;
-return firebase.database().ref('/users/' + userId).once('value').then((snapshot) => {
-  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-  var email = (snapshot.val() && snapshot.val().email) || 'Anonymous';
-  console.log(username);
-  console.log(email);
-});
+
+
+
+
