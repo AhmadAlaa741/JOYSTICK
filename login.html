@@ -24,7 +24,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="box3">
+        <div class="form">
             <div id="btn" class="button-box">
                 <button onclick="signinbtn()">Sign IN</button>
                 <button onclick="signupbtn()">SIGN UP</button>
@@ -36,12 +36,12 @@
 
             </div>
             <div id="signup" class="group2">
-                <input id="name" class="input-field" placeholder="Name">
-                <input id="username" class="input-field" placeholder="Username">
+                <input id="Name" class="input-field" placeholder="Name">
+                <input id="user@name" class="input-field" placeholder="Username">
                 <input id="up-email" class="input-field" placeholder="Email ID">
                 <input type="password" id="up-password" class="input-field" placeholder="Enter password">
                 <input type="password" id="pass2" class="input-field" placeholder="Set password">
-                <button class="submit-btn" onclick="signup()">Sign up</button>
+                <button id="signedup" class="submit-btn" onclick="signup()">Sign up</button>
             </div>
         </div>
     </div>
@@ -64,8 +64,30 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDZIxrnJEBPQHcV03cWLqaB1DTXQg0Be5Q",
+            authDomain: "joystick-8c289.firebaseapp.com",
+            databaseURL: "https://joystick-8c289-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "joystick-8c289",
+            storageBucket: "joystick-8c289.appspot.com",
+            messagingSenderId: "355605299009",
+            appId: "1:355605299009:web:e05645716eee28c8676bc0"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+        const db = firebase.database();
+
+    </script>
 
     <script src="auth.js"></script>
+    <script src="database.js"></script>
+
 </body>
 <footer>
     <div class="footer-content">
