@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Maze JavaScript</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="/footer/css/font-awesome.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-
 </head>
 
 <body>
@@ -23,33 +21,32 @@
                 </ul>
             </nav>
         </div>
-        <img id="head"src="assets/joystick.png" class="header-icon">
         <div class="form">
             <div id="btn" class="button-box">
-                <button onclick="signinbtn()">Sign IN</button>
-                <button onclick="signupbtn()">SIGN UP</button>
+                <a onclick="signinbtn()">SIGN IN</a>
+                <a onclick="signupbtn()">SIGN UP</a>
             </div>
             <div id="sign-in" class="group1">
-                <label >Email</label>
-                <input id="in-email" type="email"class="input-field" >
-                <label >Password</label>
-                <input id="in-password" type="password" class="input-field" >
-                <button class="submit-btn" id="signin">Sign in</button>
+                <label>Email</label>
+                <input id="in-email" type="email" class="input-field">
+                <label>Password</label>
+                <input id="in-password" type="password" class="input-field">
+                <a class="submit-btn" id="signin-btn">Sign in</a>
             </div>
             <div id="sign-up" class="group2">
-                <label >Name</label>
+                <label>Name</label>
                 <input id="Name" type="text" class="input-field">
-                <label >Username</label>
-                <input id="user@name" class="input-field" >
-                <label >Age</label>
-                <input id="Age" type="number"class="input-field" >
-                <label >Email</label>
-                <input id="up-email" type="email"class="input-field" >
-                <label >Password</label>
-                <input type="password" id="up-password" class="input-field" >
-                <label >Set Password</label>
-                <input type="password" id="pass2" class="input-field" >
-                <button id="signup" class="submit-btn" onclick="signup()">Sign up</button>
+                <label>Username</label>
+                <input id="user@name" class="input-field">
+                <label>Age</label>
+                <input id="Age" type="number" class="input-field">
+                <label>Email</label>
+                <input id="up-email" type="email" class="input-field">
+                <label>Password</label>
+                <input type="password" id="up-password" class="input-field">
+                <label>Set Password</label>
+                <input type="password" id="pass2" class="input-field">
+                <a id="signup-btn" class="submit-btn">Sign up</a>
             </div>
         </div>
     </div>
